@@ -1,5 +1,10 @@
 import React from 'react';
-import {NavLink, Router} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
+
+import Header from './Header';
+import Navigation from './Navigation';
+import Page from './Page';
+import Footer from './Footer';
 
 import '../styles/App.css';
 
@@ -8,11 +13,10 @@ class App extends React.Component {
     render(){
   return (
       <Router>
-        <header className="header">
-            <NavLink to="/faq" activeClassName="selected">
-                chuj
-            </NavLink>
-        </header>
+        <Header/>
+        <Navigation/>
+        <Page/>
+        <Footer/>
       </Router>
   );
 }

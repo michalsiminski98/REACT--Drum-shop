@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  height: 75vh;
+  margin: 0 auto;
+}
+.header__photo {
+  background-image: url(../images/header.jpg);
+  background-size: cover;
+  background-color: black;
+  background-position: center 72%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.header__photo::after {
+  content: "";
+  display: block;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+}

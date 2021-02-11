@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 import '../styles/Navigation.css';
 
 const navigationList = [
-    {name: "Shop", path:'/'},
+    {name: "Shop", path:'/', exact: true},
     {name: "Contact", path:'/contact'},
     {name: "cart", path:'/cart'},
 ]
@@ -13,7 +13,7 @@ const Navigation = () => {
 
     const menu = navigationList.map(item => (
         <li className="navigation__li">
-            <NavLink to={item.path}>{item.name === 'cart' ? <i class="fas fa-shopping-cart"></i> : item.name}</NavLink>
+            <NavLink to={item.path} exact={item.exact && item.exact}>{item.name === 'cart' ? <i class="fas fa-shopping-cart"></i> : item.name}</NavLink>
         </li>
     ))
 

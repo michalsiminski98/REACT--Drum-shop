@@ -20,6 +20,11 @@
   text-decoration: none;
   color: #333333;
 }
+
+.navigation__li a.active {
+  color: black;
+}
+
 .navigation__li a:hover {
   color: #000;
 }

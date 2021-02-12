@@ -12,8 +12,8 @@ const navigationList = [
 const Navigation = () => {
 
     const menu = navigationList.map(item => (
-        <li className="navigation__li">
-            <NavLink to={item.path} exact={item.exact && item.exact}>{item.name === 'cart' ? <i class="fas fa-shopping-cart"></i> : item.name}</NavLink>
+        <li key={item.name} className="navigation__li">
+            <NavLink to={item.path} exact={item.exact && item.exact}>{item.name === 'cart' ? <i className="fas fa-shopping-cart"></i> : item.name}</NavLink>
         </li>
     ))
 
